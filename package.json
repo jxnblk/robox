@@ -1,0 +1,45 @@
+{
+  "name": "robox",
+  "version": "1.0.0-beta.1",
+  "description": "Higher-order React component for adding style helper props based on understyle",
+  "main": "dist/Robox.js",
+  "scripts": {
+    "prepublish": "mkdir -p dist && babel src --out-dir dist",
+    "test": "standard && ava -v"
+  },
+  "keywords": [
+    "react",
+    "react-hoc",
+    "style",
+    "css",
+    "css-in-js",
+    "understyle"
+  ],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "babel-cli": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.5",
+    "enzyme": "^2.4.1",
+    "react": "^15.2.1",
+    "react-addons-test-utils": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "standard": "^7.1.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "dependencies": {
+    "understyle": "^1.0.0-beta.4"
+  }
+}
