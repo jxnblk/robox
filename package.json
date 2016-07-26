@@ -17,6 +17,9 @@
   ],
   "author": "Brent Jackson",
   "license": "MIT",
+  "dependencies": {
+    "understyle": "^1.0.0-beta.4"
+  },
   "devDependencies": {
     "ava": "^0.15.2",
     "babel-cli": "^6.11.4",
@@ -38,8 +41,5 @@
       "babel-register"
     ],
     "babel": "inherit"
-  },
-  "dependencies": {
-    "understyle": "^1.0.0-beta.4"
   }
 }
