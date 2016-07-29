@@ -7,8 +7,9 @@ const Robox = (Comp) => {
     render () {
       const { robox: config } = this.context
       const {
-        m, mt, mr, mb, ml, mx, my,
         p, pt, pr, pb, pl, px, py,
+        m, mt, mr, mb, ml, mx, my,
+        gutter,
         col,
         block,
         inlineBlock,
@@ -19,7 +20,7 @@ const Robox = (Comp) => {
         flex,
         inlineFlex,
         wrap,
-        column,
+        flexColumn,
         align,
         justify,
         flexAuto,
@@ -31,8 +32,9 @@ const Robox = (Comp) => {
       const _style = createUnderstyle(config)
 
       const styleProps = {
-        m, mt, mr, mb, ml, mx, my,
         p, pt, pr, pb, pl, px, py,
+        m, mt, mr, mb, ml, mx, my,
+        gutter,
         col,
         block,
         inlineBlock,
@@ -43,7 +45,7 @@ const Robox = (Comp) => {
         flex,
         inlineFlex,
         wrap,
-        column,
+        flexColumn,
         align,
         justify,
         flexAuto,
@@ -77,6 +79,7 @@ const Robox = (Comp) => {
     ml: React.PropTypes.oneOf(spaceScale),
     mx: React.PropTypes.oneOf(spaceScale),
     my: React.PropTypes.oneOf(spaceScale),
+    gutter: React.PropTypes.oneOf(spaceScale),
     p: React.PropTypes.oneOf(spaceScale),
     pt: React.PropTypes.oneOf(spaceScale),
     pr: React.PropTypes.oneOf(spaceScale),
@@ -94,7 +97,7 @@ const Robox = (Comp) => {
     flex: React.PropTypes.bool,
     inlineFlex: React.PropTypes.bool,
     wrap: React.PropTypes.bool,
-    column: React.PropTypes.bool,
+    flexColumn: React.PropTypes.bool,
     align: React.PropTypes.oneOf([
       'flex-start',
       'flex-end',
@@ -111,7 +114,17 @@ const Robox = (Comp) => {
     ]),
     flexAuto: React.PropTypes.bool,
     flexNone: React.PropTypes.bool,
-    order: React.PropTypes.number
+    order: React.PropTypes.number,
+
+    // Warn against legacy prop name
+    column: (props, propName, componentName) => {
+      if (props[propName]) {
+        return new Error(
+          'Warning! Invalid prop `' + propName + '` supplied to' +
+            ' `' + componentName + '`. Use the `column` prop instead.'
+        )
+      }
+    }
   }
 
   return WrappedComponent

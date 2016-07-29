@@ -94,9 +94,9 @@ Sets various flexbox layout properties
 prop | type | description
 -----|------|------------
 `wrap`    | boolean | flex-wrap: wrap
-`column`  | boolean | flex-direction: column
 `align`   | string  | align-items
 `justify` | string  | justify-content
+`flexColumn`| boolean | flex-direction: column
 `flexAuto`| boolean | flex: 1 1 auto
 `flexNone`| boolean | flex: none
 `order`   | number  | order
