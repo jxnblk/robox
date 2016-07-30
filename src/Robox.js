@@ -54,6 +54,7 @@ const Robox = (Comp) => {
       }
 
       const sx = {
+        boxSizing: 'border-box',
         ..._style(styleProps),
         ...style
       }

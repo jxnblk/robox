@@ -25,6 +25,7 @@ test('applies styles based on understyle', t => {
   const wrapper = shallow(<Button m={2} p={1} />)
   t.deepEqual(wrapper.props(), {
     style: {
+      boxSizing: 'border-box',
       margin: 16,
       padding: 8
     }
@@ -46,6 +47,7 @@ test('combines style prop with understyle styles', t => {
   const wrapper = shallow(<Button m={2} style={sx} />)
   t.deepEqual(wrapper.props(), {
     style: {
+      boxSizing: 'border-box',
       color: 'tomato',
       margin: 16
     }
@@ -57,6 +59,7 @@ test('overrides understyle with style prop', t => {
   const wrapper = shallow(<Button m={2} style={sx} />)
   t.deepEqual(wrapper.props(), {
     style: {
+      boxSizing: 'border-box',
       margin: 12
     }
   })
@@ -80,6 +83,7 @@ test('allows configuration of scale through context', t => {
     }
   })
   t.deepEqual(wrapper.props().style, {
+    boxSizing: 'border-box',
     margin: 6,
     padding: 12
   })
@@ -94,6 +98,7 @@ test('allows configuration of columns through context', t => {
     }
   })
   t.deepEqual(wrapper.props().style, {
+    boxSizing: 'border-box',
     width: '25%'
   })
 })
