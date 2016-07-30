@@ -18,7 +18,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "understyle": "^1.0.0"
+    "understyle": "^1.1.0"
   },
   "devDependencies": {
     "ava": "^0.15.2",
