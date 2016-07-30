@@ -32,13 +32,13 @@ test('applies styles based on understyle', t => {
 })
 
 test('applies boolean style props', t => {
+  t.plan(4)
   const wrapper = shallow(<Button flex wrap flexColumn flexAuto />)
-  t.deepEqual(wrapper.props().style, {
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'column',
-    flex: '1 1 auto'
-  })
+  const { style } = wrapper.props()
+  t.is(typeof style.display, 'string')
+  t.is(typeof style.flexWrap, 'string')
+  t.is(typeof style.flexDirection, 'string')
+  t.is(typeof style.flex, 'string')
 })
 
 test('combines style prop with understyle styles', t => {
