@@ -3,7 +3,7 @@
 
 Higher-order React component for adding style helper props based on [understyle](https://github.com/jxnblk/understyle)
 
-[![Build Status](https://travis-ci.org/jxnblk/understyle.svg?branch=master)](https://travis-ci.org/jxnblk/understyle)
+[![Build Status](https://travis-ci.org/jxnblk/robox.svg?branch=master)](https://travis-ci.org/jxnblk/robox)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ```sh
