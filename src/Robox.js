@@ -70,7 +70,10 @@ const Robox = (Comp) => {
     })
   }
 
-  const spaceScale = [ 0, 1, 2, 3, 4, 5, 6 ]
+  const spaceScale = [
+    -6, -5, -4, -3, -2, -1,
+    0, 1, 2, 3, 4, 5, 6
+  ]
 
   WrappedComponent.propTypes = {
     m: React.PropTypes.oneOf(spaceScale),
